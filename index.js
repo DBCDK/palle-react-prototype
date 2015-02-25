@@ -7,14 +7,14 @@ app.use('/', express.static(__dirname + '/dist'));
        res.sendFile(__dirname + '/dist/index.html');
    });*/
 app.get('/', function root (req, res) {
- res.sendFile(__dirname + '/dist/index.html');
+ res.sendFile(__dirname + '/app/layouts/index.html');
 });
 app.get('/admin/', function root (req, res) {
- res.sendFile(__dirname + '/dist/index.html');
+ res.sendFile(__dirname + '/app/layouts/index.html');
 });
 
 app.get('/search/*', function root (req, res) {
- res.sendFile(__dirname + '/dist/index.html');
+ res.sendFile(__dirname + '/app/layouts/index.html');
 });
 
 http.listen(4000, function http_listen () {
@@ -42,7 +42,7 @@ app.get('/API/search', function search(req, res) {
   var query = unescape(req.query.query);
   var template = Search.transformers.workView;
 
- Search.get(q).transform(template).add(holdingstatus, 'holdingstatus').add(image, 'iamge');
+ Search.get(q).transform(template)
  .then(function(result){
   res.send(result);
  })
