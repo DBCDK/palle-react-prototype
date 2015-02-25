@@ -1,6 +1,6 @@
 var reflux = require('reflux');
 var actions = require('../actions/Actions.js');
-var data = require('../static/staticData.js');
+var data = require('../static/StaticData.js');
 
 var _store = {
  questions: data.get('questions'),
