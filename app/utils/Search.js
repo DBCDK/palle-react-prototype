@@ -1,4 +1,4 @@
-var Opensearch = require('../server/clients/Opensearch.client');
+var Opensearch = require('../server/clients/OpenSearch.client');
 var Promise = require('es6-promise').Promise;
 var transform = require('jsonpath-object-transform');
 
