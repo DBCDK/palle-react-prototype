@@ -1,0 +1,62 @@
+{
+  "name": "pref-search",
+  "author": "Vibjerg",
+  "version": "0.0.1",
+  "description": "Preference builder using react and reflux and maybe reactive programming",
+  "main": "js/app.js",
+  "dependencies": {
+    "busboy": "^0.2.9",
+    "connect-busboy": "0.0.2",
+    "dropzone": "^4.0.1",
+    "es6-promise": "^2.0.1",
+    "express": "^4.11.2",
+    "hammerjs": "latest",
+    "jsonpath-object-transform": "^1.0.3",
+    "lodash": "*",
+    "promise": "^6.1.0",
+    "react": "^0.12.0",
+    "react-button": "^1.0.0",
+    "react-loader": "^1.1.0",
+    "react-router": "^0.12.0",
+    "reflux": "*",
+    "request": "^2.53.0",
+    "rx": "^2.3.25",
+    "soap": "^0.6.1",
+    "superagent": "^0.21.0",
+    "superagent-promise": "^0.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "jest-cli": "~0.1.17",
+    "live-reload": "latest",
+    "opener": "^1.4.0",
+    "parallelshell": "^1.0.4",
+    "reactify": "^0.15.2",
+    "stylus": "latest",
+    "uglify-js": "~2.4.15",
+    "watch": "latest"
+  },
+  "scripts": {
+    "build:css": "stylus app/stylus/main.styl --out dist/",
+    "build:js": "browserify app/app.js > dist/bundle.js",
+    "build": "npm run build:js && npm run build:css",
+    "test": "jest",
+    "watch:css": "watch \"npm run build:css\" app/stylus/",
+    "watch:js": "watchify app/app.js -o dist/bundle.js -v -d",
+    "watch": "parallelshell \"npm run watch:css\" \"npm run watch:js\"",
+    "open:dev": "opener http://localhost:4000",
+    "serve": "supervisor -w app/ index.js",
+    "live-reload": "live-reload --port 9091 dist/",
+    "dev": "parallelshell \"npm run live-reload -s\" \"npm run serve -s\" \"npm run watch -s\""
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "jest": {
+    "rootDir": "./app"
+  }
+}

@@ -1,0 +1,55 @@
+blue = #004A61;
+green = #008789;
+red = #FC4349;
+light-grey = #F0F0F0;
+dark-grey = #444444;
+
+fonts = helvetica;
+
+* {
+ box-sizing: border-box;
+}
+body, html {
+ height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ margin: 0;
+ margin-bottom: 1rem;
+}
+
+body {
+ margin 0;
+ font-family: fonts
+ background: dark-grey;
+}
+
+.app {
+ min-height : 100%;
+ height : inherit;
+ max-width: 400px;
+ margin: auto;
+ padding: 10px
+ background: light-grey;
+ position: relative;
+}
+
+button {
+ margin: auto;
+ padding: 10px 20px
+ background-color: red;
+ color: light-grey;
+ font-size: 20px;
+ font-weight: bold;
+ border: 1px solid light-grey;
+ transition: all 200ms;
+ &:hover {
+  color: light-grey;
+  background-color: blue;
+ }
+}
+// Add components
+@import 'components/question';
+@import 'components/work';
+@import 'vendor/basic';
+@import 'vendor/dropzone';
