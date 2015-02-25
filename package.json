@@ -1,6 +1,10 @@
 {
   "name": "pref-search",
-  "author": "Vibjerg",
+  "author": "ux-dbc",
+  "contributors": {
+    "name": "Søren Vibjerg",
+    "mail": "svi@dbc.dk"
+  },
   "version": "0.0.1",
   "description": "Preference builder using react and reflux and maybe reactive programming",
   "main": "js/app.js",
