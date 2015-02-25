@@ -6,9 +6,6 @@ var Option =  require('./QuestionOption.jsx');
 var Actions =  require('../actions/Actions.js');
 var RButton = require('react-button');
 var Navigation = require('react-router').Navigation;
-
-
-
 var fnMap = [_renderFirstpage,_renderQuestions,_renderLastpage];
 
 function _renderQuestions(state) {
