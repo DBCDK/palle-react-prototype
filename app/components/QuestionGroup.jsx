@@ -45,7 +45,7 @@ function _getCurrentPage(page) {
   return fnMap[page];
 }
 
-function getSarchCodes(answers) {
+function getSearchCodes(answers) {
   return answers.map(function (answer){
     return answer.question.options[answer.selectedOption].searchCode;
   }).join(' ');
@@ -81,7 +81,7 @@ var QuestionGroup = React.createClass({
   }
   if (questions.currentQuestion >= questions.questions.length){
 
-    this.transitionTo('search', {path: getSarchCodes(questions.answers)});
+    this.transitionTo('search', {path: getSearchCodes(questions.answers)});
   }
   else {
   this.setState(newState);
