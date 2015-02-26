@@ -51,6 +51,7 @@ var SwiperQuestion = React.createClass({
   return (
    <div id={this.props.id} className={classes}>
    <h2 className='question--title' contentEditable="true">{question.title}</h2>
+   <img src={question.image} />
    {this.props.children}
    </div>
    );

@@ -20,11 +20,7 @@ var QuestionOption = React.createClass({
     className="swiper-option"
     key={this.props.key}
     >
-    {image}
     {edit}
-    <span className={classes} contentEditable={this.props.edit}>
-     {this.props.option.text}
-    </span>
    </div>
    );
  },
