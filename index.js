@@ -42,7 +42,7 @@ app.get('/API/search', function search(req, res) {
   var query = unescape(req.query.query);
   var template = Search.transformers.workView;
 
- Search.get(q).transform(template)
+ Search.get(query).transform(template)
  .then(function(result){
   res.send(result);
  })
