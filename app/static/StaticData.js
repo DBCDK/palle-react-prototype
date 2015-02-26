@@ -18,29 +18,23 @@ var Data = {
 Data.set([
 {
  title: 'Kan du lide film?',
+ image: 'http://lorempixel.com/400/400/sports',
  options: [
  {
-  text: 'Ja tak',
-  image: 'http://lorempixel.com/400/200/sports',
   searchCode: 'term.type=film'
  },
  {
-  text: 'Nej Tak',
-  image: 'http://lorempixel.com/400/200/nature',
   searchCode: '* not term.type=film'
  }]
 },
 {
  title: 'Er du til gys?',
+ image: 'http://lorempixel.com/400/200/technics',
  options: [
  {
-  text: 'Uh ja gør mig bange',
-  image: 'http://lorempixel.com/400/200/animals',
   searchCode: 'and term.subject=gys'
  },
  {
-  text: 'Nej jeg er lidt af en grisling',
-  image: 'http://lorempixel.com/400/200/technics',
   searchCode: 'not term.subject=gys'
  }]
 }
