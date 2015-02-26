@@ -48,7 +48,7 @@ function _getCurrentPage(page) {
 function getSarchCodes(answers) {
   return answers.map(function (answer){
     return answer.question.options[answer.selectedOption].searchCode;
-  }).join(' and ');
+  }).join(' ');
 }
 
 var QuestionGroup = React.createClass({

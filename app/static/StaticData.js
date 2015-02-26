@@ -27,7 +27,7 @@ Data.set([
  {
   text: 'Nej Tak',
   image: 'http://lorempixel.com/400/200/nature',
-  searchCode: '(not (term.type=film))'
+  searchCode: '* not term.type=film'
  }]
 },
 {
@@ -36,12 +36,12 @@ Data.set([
  {
   text: 'Uh ja gør mig bange',
   image: 'http://lorempixel.com/400/200/animals',
-  searchCode: 'term.subject=gys'
+  searchCode: 'and term.subject=gys'
  },
  {
   text: 'Nej jeg er lidt af en grisling',
   image: 'http://lorempixel.com/400/200/technics',
-  searchCode: 'not (term.subject=gys)'
+  searchCode: 'not term.subject=gys'
  }]
 }
 ], 'questions');

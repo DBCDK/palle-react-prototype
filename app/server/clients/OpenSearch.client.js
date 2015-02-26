@@ -13,7 +13,8 @@ var _default = {
 }
 
 module.exports = function (query){
-  var options =  util._extend(_default, {query : '"' + query + '"'});
+  var options =  util._extend(_default, {query : query});
+  console.log(options);
   return new Promise(function (resolve, reject) {
     soap.createClient(url, function(err, client) {
       if (err) {

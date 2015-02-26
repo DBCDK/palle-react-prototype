@@ -12,7 +12,6 @@ var _store = {
 function _search(query) {
 agent.get('/API/search', {query : query}).end()
  .then(function onResult(res) {
-  console.log(res);
     _store.result = res.body.collections;
     _store.pending = false;
    SearchStore.trigger(_store);
