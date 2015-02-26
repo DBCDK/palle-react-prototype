@@ -3,24 +3,27 @@ var Reflux = require('reflux');
 var QuestionOption =  require('./QuestionOption.jsx');
 var Actions =  require('../actions/Actions');
 var Swiper = require('../utils/SwipeEvents');
-var width = window.innerWidth;
-var height = window.innerHeight;
 
-
+/**
+ * Create a list jsx Options
+ * @param  {array} question List of options
+ * @return {array}          list of JSX options
+ */
 function _getOptionComponents(question) {
  return question.options.map(function(option, i){
   return(<QuestionOption question={question} option={option} key={i} optionKey={i} />);
  });
 }
 
+/**
+ * React SwiperQuestion class
+ */
 var SwiperQuestion = React.createClass({
 
  mixins: [Reflux.ListenerMixin],
 
  componentDidMount: function() {
   Swiper(this.getDOMNode(), this._sendAnswer);
-
-  //var myDropzone = new Dropzone("div#dropzone", { url: "/fileupload"});
  },
 
  getInitialState: function() {
@@ -32,13 +35,6 @@ var SwiperQuestion = React.createClass({
     question : this.props.question,
     selectedOption : selectedOption
    });
- },
-
- componentWillMount: function() {
-
- },
- componentWillUnmount: function() {
-
  },
 
  render: function() {
