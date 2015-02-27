@@ -12,6 +12,12 @@ app.use('/img', express.static(__dirname + '/app/static/images'));
 app.get('/', function root (req, res) {
  res.sendFile(__dirname + '/app/layouts/index.html');
 });
+app.get('/questions', function root (req, res) {
+ res.sendFile(__dirname + '/app/layouts/index.html');
+});
+app.get('/questions/*', function root (req, res) {
+ res.sendFile(__dirname + '/app/layouts/index.html');
+});
 app.get('/admin/', function root (req, res) {
  res.sendFile(__dirname + '/app/layouts/index.html');
 });

@@ -1,8 +1,10 @@
-blue = #004A61;
-green = #008789;
-red = #FC4349;
-light-grey = #F0F0F0;
 dark-grey = #444444;
+background = #d9d8e0;
+outline = #efeef5
+black = #252525
+white = #ffffff
+green = #5ed74e
+red = #ff4040
 
 fonts = helvetica;
 
@@ -22,6 +24,11 @@ body {
  margin 0;
  font-family: fonts
  background: dark-grey;
+ color: black;
+}
+
+.hide {
+ display: none;
 }
 
 .app {
@@ -29,40 +36,8 @@ body {
  height : inherit;
  max-width: 400px;
  margin: auto;
- background: light-grey;
+ background: background;
  position: relative;
-}
-
-button {
- margin: auto;
- padding: 10px 20px
- background-color: red;
- color: light-grey;
- font-size: 20px;
- font-weight: bold;
- border: 1px solid light-grey;
- transition: all 200ms;
- &:hover {
-  color: light-grey;
-  background-color: blue;
- }
-}
-
-.arrow {
- background-image: url('/img/arrow.svg');
-}
-
-.round-button {
-  height: 100px;
-  width: 100px;
-  border: 8px solid red;
-  border-radius: 50px;
-  box-shadow: 1px 1px 5px #555;
-  background-color: #fff;
-  object {
-    width: 100%
-    padding 10px;
-  }
 }
 
 .button-group {
@@ -70,16 +45,23 @@ button {
   bottom : 20px;
 
 }
-.checkmark {
-  fill: red;
-}
-.round-button:hover .checkmark {
-  fill: grey;
+
+.svg{
+ width: 100%;
+ pointer-events: none;
 }
 
+.inline {
+ display: inline;
+}
 
+a {
+ cursor: pointer;
+}
 // Add components
 @import 'components/question';
 @import 'components/work';
+@import 'components/ps-frontpage';
+@import 'components/round-button';
 @import 'vendor/basic';
 @import 'vendor/dropzone';

@@ -1,0 +1,48 @@
+btnsize = 60px
+
+.round-button {
+ position: relative;
+ cursor: pointer;
+ display: block;
+height: btnsize;
+width: btnsize;
+border: (btnsize/10) solid outline;
+border-radius: (btnsize/2);
+box-shadow: 1px 1px 5px #555;
+background-color: white;
+transition: all 100ms ease-in;
+ object {
+   width: 100%
+   padding 10px;
+ }
+ &:hover, &:active {
+  border-color: #222;
+
+ }
+ &:active {
+  border-color: #222;
+  box-shadow: none;
+ }
+ &::after {
+ display: block;
+ position: absolute;
+ top: 0;
+ width: btnsize;
+ height: btnsize;
+ border-radius: (btnsize/2);
+ margin: -(btnsize/10);
+ content: "";
+}
+}
+.arrow {
+  fill: green;
+}
+.arrow-black {
+  fill: black;
+}
+.checkmark {
+  fill: green;
+}
+.close {
+ fill: red;
+}
