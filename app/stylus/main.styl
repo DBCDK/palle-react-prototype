@@ -29,7 +29,6 @@ body {
  height : inherit;
  max-width: 400px;
  margin: auto;
- padding: 10px
  background: light-grey;
  position: relative;
 }
@@ -48,6 +47,37 @@ button {
   background-color: blue;
  }
 }
+
+.arrow {
+ background-image: url('/img/arrow.svg');
+}
+
+.round-button {
+  height: 100px;
+  width: 100px;
+  border: 8px solid red;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px #555;
+  background-color: #fff;
+  object {
+    width: 100%
+    padding 10px;
+  }
+}
+
+.button-group {
+  position: absolute;
+  bottom : 20px;
+
+}
+.checkmark {
+  fill: red;
+}
+.round-button:hover .checkmark {
+  fill: grey;
+}
+
+
 // Add components
 @import 'components/question';
 @import 'components/work';
