@@ -3,6 +3,9 @@ var app = express();
 var http = require('http').Server(app);
 
 app.use('/', express.static(__dirname + '/dist'));
+
+app.use('/img', express.static(__dirname + '/app/static/images'));
+
 /*app.use(function(req, res){
        res.sendFile(__dirname + '/dist/index.html');
    });*/
