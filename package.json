@@ -15,7 +15,7 @@
     "es6-promise": "^2.0.1",
     "express": "^4.11.2",
     "hammerjs": "latest",
-    "jsonpath-object-transform": "https://github.com/vibjerg/jsonpath-object-transform/archive/v1.0.4.tar.gz",
+    "jsonpath-object-transform": "https://github.com/vibjerg/jsonpath-object-transform/archive/1.0.5.tar.gz",
     "lodash": "*",
     "promise": "^6.1.0",
     "react": "^0.12.0",
