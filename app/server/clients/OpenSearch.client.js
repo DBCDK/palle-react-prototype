@@ -1,7 +1,7 @@
 var soap = require('soap');
 var util = require('util');
 var Promise = require('es6-promise').Promise;
-config = require.main.require('./config.js').opensearch;
+var config = require.main.require('./config.js').opensearch;
 
 var url = config.wsdl;
 
@@ -14,7 +14,6 @@ var _default = {
 
 module.exports = function (query){
   var options =  util._extend(_default, {query : query});
-  console.log(options);
   return new Promise(function (resolve, reject) {
     soap.createClient(url, function(err, client) {
       if (err) {

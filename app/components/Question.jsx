@@ -1,19 +1,7 @@
 var React = require('react/addons');
 var Reflux = require('reflux');
-var QuestionOption =  require('./QuestionOption.jsx');
 var Actions =  require('../actions/Actions');
 var Swiper = require('../utils/SwipeEvents');
-
-/**
- * Create a list jsx Options
- * @param  {array} question List of options
- * @return {array}          list of JSX options
- */
- function _getOptionComponents(question) {
-   return question.options.map(function(option, i){
-    return(<QuestionOption question={question} option={option} key={i} optionKey={i} />);
-  });
- }
 
 /**
  * React SwiperQuestion class
@@ -26,17 +14,12 @@ var SwiperQuestion = React.createClass({
     this.swiper = new Swiper(this.refs.question.getDOMNode(), this.props.answer);
   },
 
-  getInitialState: function() {
-    return this.props.question;
-  },
-
   _sendAnswer : function (selectedOption) {
-    console.log(this);
     this.swiper.clickToSwipe(selectedOption);
  },
 
  render: function() {
-  var question = this.state;
+  var question = this.props.question;
   var cx = React.addons.classSet;
   var classes = cx({
    'question-wrapper': true,
@@ -45,7 +28,7 @@ var SwiperQuestion = React.createClass({
   return (
     <div className={classes}>
      <div ref="question" id={this.props.id} className="question">
-     <h2 className='question--title' contentEditable="true">{question.title}</h2>
+     <h2 className='question--title' contentEditable={question.edit}>{question.title}</h2>
      <img src={question.image} />
      </div>
       <footer className="button-group">
