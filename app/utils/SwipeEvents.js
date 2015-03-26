@@ -5,8 +5,6 @@ var _offset = 0;
 function SwipeEvent (element, cb) {
  var element = element;
  element.style.left = _offset + 'px';
-
- //_offset = element.offsetLeft;
  var hammer = Hammer(element);
  hammer.on('pan panend swipe', actOnSwipe);
 
@@ -42,13 +40,11 @@ function clickToSwipe(option) {
   swipeout(direction);
 }
 function swipeout(direction){
-  console.log(element.style.left);
   hammer.stop(true);
   var option = (direction === Hammer.DIRECTION_LEFT) ? 0 : 1;
   var pos = (direction === Hammer.DIRECTION_LEFT) ? '-400px' : '800px';
   element.style.transition = 'left 200ms';
   element.style.left = pos;
-  console.log(element.style.left)
   element.addEventListener('transitionend', function (){
    cb(option);
  });

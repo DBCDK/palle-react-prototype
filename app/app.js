@@ -1,6 +1,5 @@
 var QuestionStart = require('./components/QuestionStart.jsx');
 var QuestionGroup = require('./components/QuestionGroup.jsx');
-var QuestionAdmin = require('./components/QuestionAdmin.jsx');
 var SearchResult = require('./components/SearchResult.jsx');
 
 var React = require('react');
@@ -21,13 +20,11 @@ var Router = require('react-router');
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
 
-
 var routes = (
   <Route handler={App}>
     <Route handler={QuestionStart} path="/" />
     <Route handler={QuestionGroup} path="/questions" />
     <Route handler={SearchResult} name="search" path='/search/:path' />
-    <Route handler={QuestionAdmin} name="admin" path='/admin' />
   </Route>
 );
 

@@ -13,7 +13,6 @@ var QuestionOption = React.createClass({
    'left': (this.props.optionKey === 0),
    'right': (this.props.optionKey === 1),
   });
-  var edit = (this.props.edit) ? <div id={"dropzone-" + this.props.optionKey} className='dropzone'></div> : null
   var image = (this.props.option.image) ? <img src={this.props.option.image} /> : null;
   return (
    <div

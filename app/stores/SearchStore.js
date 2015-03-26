@@ -1,41 +1,45 @@
 var reflux = require('reflux');
 var actions = require('../actions/Actions.js');
-var agent = require('superagent-promise');
-
+var socket = require('socket.io-client').connect();
 
 var _store = {
- pending: false,
- result: [],
- query: '',
+  pending: false,
+  result: [],
+  query: '',
 }
 
-function _search(query) {
-agent.get('/API/search', {query : query}).end()
- .then(function onResult(res) {
-    _store.result = res.body.collections;
-    _store.pending = false;
-   SearchStore.trigger(_store);
-  })
- .catch(function error(res) {
-  _store.pending = false;
-  _store.error = res;
- });
+function _listen(cb) {
+  socket.on('searchResponse', function (data) {
+    cb(data)
+  });
 }
 
+function _socketSearch(query) {
+  socket.emit('searchRequest', {
+    query: query
+  });
+}
 
 var SearchStore = reflux.createStore({
- getState: function () {
-  return _store;
- },
- newQuestion: function () {
-  return _template;
- },
- search: function(query) {
+  getState: function() {
+    return _store;
+  },
+  search: function(query) {
     _store.pending = true;
     _store.query = query;
+    _store.result = [];
     this.trigger(_store);
-    _search(query);
- },
+    _socketSearch(query);
+  },
+  result: function (result) {
+    _store.pending = false;
+    _store.result = result.collections;
+    this.trigger(_store);
+  },
+  init: function() {
+    this.listenTo(actions.search, this.search);
+    _listen(this.result);
+  },
 });
 
 module.exports = SearchStore;
