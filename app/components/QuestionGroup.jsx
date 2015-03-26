@@ -2,20 +2,11 @@ var React = require('react');
 var Reflux = require('reflux');
 var QuestionStore =  require('../stores/QuestionStore');
 var Question =  require('./Question.jsx');
+var ArrowLink = require('./ArrowLink.react');
 var Actions =  require('../actions/Actions.js');
 var Navigation = require('react-router').Navigation;
 
 
-var GotoSearch = React.createClass({
-  render: function() {
-
-    return (
-      <div className={this.props.class}>
-        <a onClick={this.props.click} className="inliner">Hvis mig noget <object type="image/svg+xml" data="/img/arrow-black.svg" className="svg" /></a>
-      </div>
-    );
-  }
-});
 function renderQuestions(state, cb) {
  return state.questions.map(function (question, i) {
   question.current = (i == state.currentQuestion);
@@ -24,7 +15,6 @@ function renderQuestions(state, cb) {
    );
  });
 }
-
 
 function getSearchCodes(answers) {
   return answers.map(function (answer){
@@ -76,13 +66,10 @@ _sendAnswer : function (selectedOption) {
   var questions = renderQuestions(this.state.questions, this._sendAnswer);
   return (
     <div>
-   <div
-    ref="questionGroup"
-    className='question--group'
-   >
+   <div ref="questionGroup" className='question--group'>
     {questions}
    </div>
-   <GotoSearch click={this._gotoSearch.bind(this)} class={gotoSearch} />
+   <ArrowLink click={this._gotoSearch.bind(this)} class={gotoSearch} />
    </div>
   );
  },
