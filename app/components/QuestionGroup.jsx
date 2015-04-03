@@ -5,7 +5,8 @@ var Question =  require('./Question.jsx');
 var ArrowLink = require('./ArrowLink.react');
 var Actions =  require('../actions/Actions.js');
 var Navigation = require('react-router').Navigation;
-
+var _ = require('lodash');
+var initialSettings = ['term.workType=literature'];
 
 function renderQuestions(state, cb) {
  return state.questions.map(function (question, i) {
@@ -55,7 +56,9 @@ _sendAnswer : function (selectedOption) {
   }
  },
  _gotoSearch : function() {
-  this.transitionTo('search', {path: getSearchCodes(this.state.questions.answers)});
+  var answers = getSearchCodes(this.state.questions.answers);
+  var answersWithInit = initialSettings + ' ' + answers;
+  this.transitionTo('search', {path: answersWithInit});
  },
  componentDidMount: function() {
   this.listenTo(QuestionStore, this._updateQuestionState);

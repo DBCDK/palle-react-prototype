@@ -3,7 +3,7 @@ var actions = require('../actions/Actions.js');
 var data = require('../static/StaticData.js');
 
 var _store = {
- questions: data.get('questions'),
+ questions: data.shuffled('questions'),
  currentQuestion : 0,
  answers: []
 }

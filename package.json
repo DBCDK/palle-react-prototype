@@ -17,7 +17,7 @@
     "express": "^4.11.2",
     "hammerjs": "latest",
     "jsonpath-object-transform": "https://github.com/vibjerg/jsonpath-object-transform/archive/1.0.5.tar.gz",
-    "lodash": "*",
+    "lodash": "^3.6.0",
     "promise": "^6.1.0",
     "react": "^0.12.0",
     "react-button": "^1.0.0",
