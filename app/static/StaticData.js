@@ -38,7 +38,7 @@ function shuffle(array) {
 }
 
 Data.set([
-{
+/*{
  title: 'Kan du lide gamle bøger',
  image: 'http://lorempixel.com/400/400/sports',
  options: [
@@ -48,7 +48,7 @@ Data.set([
  {
   searchCode: '*'
  }]
-},
+},*/
 {
  title: 'Kan du lide tegneserier?',
  image: 'http://lorempixel.com/400/400/technics',

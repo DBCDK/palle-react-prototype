@@ -65,7 +65,7 @@ _sendAnswer : function (selectedOption) {
  },
 
  render: function() {
-  var gotoSearch = (this.state.questions.currentQuestion > 0) ? 'show' : 'hide';
+  var gotoSearch = (this.state.questions.currentQuestion > 3) ? 'show' : 'hide';
   var questions = renderQuestions(this.state.questions, this._sendAnswer);
   return (
     <div>
