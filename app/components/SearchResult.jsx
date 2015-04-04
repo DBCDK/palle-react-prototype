@@ -30,6 +30,7 @@ var SearchResult = React.createClass({
   });
   return (
    <div ref="SearchResult" className='searchresult'>
+    <h1>Resultat</h1>
     <Loader loaded={!this.state.pending} />
     {result}
    </div>
