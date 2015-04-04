@@ -33,6 +33,7 @@
     "superagent-promise": "^0.2.0"
   },
   "devDependencies": {
+    "babelify": "^6.0.1",
     "browserify": "^6.2.0",
     "envify": "^3.0.0",
     "jest-cli": "~0.1.17",
@@ -60,7 +61,8 @@
   "browserify": {
     "transform": [
       "reactify",
-      "envify"
+      "envify",
+      "babelify"
     ]
   },
   "jest": {
