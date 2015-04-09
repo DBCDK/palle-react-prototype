@@ -50,8 +50,8 @@ Data.set([
    }]
    },*/
   {
-    title: 'Kan du lide tegneserier?',
-    image: 'http://lorempixel.com/400/400/technics',
+    title: 'Du er til tegneserier?',
+    image: '/img/tegneserier.jpg',
     options: [
       {
         searchCode: 'or term.type=tegneserie'
@@ -62,8 +62,8 @@ Data.set([
   }
   ,
   {
-    title: 'Kan du lide vikinger?',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du er vild med vikinger?',
+    image: '/img/vikinger.jpg',
     options: [
       {
         searchCode: 'or term.subject=vikinger'
@@ -74,8 +74,8 @@ Data.set([
   },
 
   {
-    title: 'Kan du lide varulve?',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du kan lide varulve?',
+    image: '/img/varulve.jpg',
     options: [
       {
         searchCode: 'or term.subject=varulve'
@@ -85,19 +85,19 @@ Data.set([
       }]
   },
   {
-    title: 'Elsker du serier?',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du elsker serier?',
+    image: '/img/serier.jpg',
     options: [
       {
-        searchCode: 'dkcclphrase.lse=*'
+        searchCode: 'or dkcclphrase.lse=*'
       },
       {
         searchCode: 'not dkcclphrase.lse=*'
       }]
   },
   {
-    title: 'Jeg er en grinebider',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du er en grinebider?',
+    image: '/img/grinebider.jpg',
     options: [
       {
         searchCode: 'or term.subject=humor'
@@ -107,8 +107,8 @@ Data.set([
       }]
   },
   {
-    title: 'Jeg er altid alvorlig',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du er tit alvorlig?',
+    image: '/img/alvorlig.jpg',
     options: [
       {
         searchCode: 'or term.subject=(fattigdom or mobning or død or forurening)'
@@ -118,8 +118,8 @@ Data.set([
       }]
   },
   {
-    title: 'Jeg er computernørd',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du er computernørd?',
+    image: '/img/computer-nerd.jpg',
     options: [
       {
         searchCode: 'or term.subject=(computere or computernørder)'
@@ -129,8 +129,8 @@ Data.set([
       }]
   },
   {
-    title: 'Jeg er sportsidiot',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du er sportsidiot?',
+    image: '/img/sport.jpg',
     options: [
       {
         searchCode: 'or term.subject=(sport or idræt)'
@@ -142,8 +142,8 @@ Data.set([
 
   ,
   {
-    title: 'På sporet efter mysterier',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du elsker at opklare mord?',
+    image: '/img/mysterier.jpg',
     options: [
       {
         searchCode: 'or term.subject=krimi'
@@ -155,8 +155,8 @@ Data.set([
 
   ,
   {
-    title: 'Jeg vil have tidsrejser og marsmænd',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du vil have tidsrejser og marsmænd?',
+    image: '/img/science-fiction.jpg',
     options: [
       {
         searchCode: 'or term.subject="science fiction"'
@@ -168,11 +168,11 @@ Data.set([
 
   ,
   {
-    title: 'Jeg elsker dyr',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du elsker dyr?',
+    image: '/img/dyr.jpg',
     options: [
       {
-        searchCode: 'or term.subject=dur'
+        searchCode: 'or term.subject=dyr'
       },
       {
         searchCode: 'not term.subject=dyr'
@@ -181,8 +181,8 @@ Data.set([
 
   ,
   {
-    title: 'Jeg er til troldmænd og tryllestave',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Er du vild med troldmænd og tryllestave?',
+    image: '/img/troldmaend.jpg',
     options: [
       {
         searchCode: 'or term.subject=fantasy'
@@ -193,8 +193,8 @@ Data.set([
   }
   ,
   {
-    title: 'Jeg vil have en god historie',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du elsker gode historier?',
+    image: '/img/god-historie.jpg',
     options: [
       {
         searchCode: 'or term.literaryForm=fiction'
@@ -205,8 +205,8 @@ Data.set([
   }
   ,
   {
-    title: 'Jeg vil læse noget om virkeligheden',
-    image: 'http://lorempixel.com/400/400/animals',
+    title: 'Du læser helst om virkeligheden?',
+    image: '/img/virkeligheden.jpg',
     options: [
       {
         searchCode: 'or term.literaryForm=nonfiction'

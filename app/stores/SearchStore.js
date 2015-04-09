@@ -5,11 +5,11 @@ var socket = require('socket.io-client').connect();
 var _store = {
   pending: false,
   result: [],
-  query: '',
+  query: ''
 }
 
 function _listen(cb) {
-  socket.on('searchResponse', function (data) {
+  socket.on('searchResponse', function(data) {
     cb(data)
   });
 }
@@ -31,7 +31,7 @@ var SearchStore = reflux.createStore({
     this.trigger(_store);
     _socketSearch(query);
   },
-  result: function (result) {
+  result: function(result) {
     _store.pending = false;
     _store.result = result.collections;
     this.trigger(_store);
@@ -39,7 +39,7 @@ var SearchStore = reflux.createStore({
   init: function() {
     this.listenTo(actions.search, this.search);
     _listen(this.result);
-  },
+  }
 });
 
 module.exports = SearchStore;

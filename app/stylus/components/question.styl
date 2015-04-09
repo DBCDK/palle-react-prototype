@@ -1,20 +1,20 @@
 
 .question--group {
- width: 320px;
- margin: auto;
- overflow: hidden;
- position: relative;
- z-index: 1;
- height: 400px;
- button {
-  background-color : dark-grey;
-  width: 100%;
-  margin: 10px auto;
-}
+  width: 320px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 400px;
+  button {
+    background-color: dark-grey;
+    width: 100%;
+    margin: 10px auto;
+  }
 }
 
 .admin .question {
-  position:inherit;
+  position: inherit;
 }
 
 .question {
@@ -30,18 +30,17 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 10px;
-  /*height: 80%;
-  max-height: 400px;*/
   margin: 10px 10%;
   box-shadow: 1px 1px 6px #666;
   svg, img {
     max-width 100%;
+    max-height 200px;
     display block;
     margin auto;
     pointer-events: none
   }
 
-  .current &{
+  .current & {
     top: 0;
     left: 0;
     display block;
@@ -56,6 +55,7 @@
     font-weight: lighter;
   }
 }
+
 .button-group {
   display: none;
   .current & {
@@ -79,7 +79,7 @@
 }
 
 .inliner {
-  font-size: 14px;
+  font-size: 1rem;
   display: block;
   text-align: center;
   object {
@@ -90,39 +90,42 @@
 }
 
 .swiper-button {
- display: block;
- position: relative;
- background-color: #88b7d5;
- margin: 20px;
- padding: 10px;
- position: relative;
- &.left {
-  right: -12px;
-  border-radius: 0 5px 5px 0;
+  display: block;
+  position: relative;
+  background-color: #88b7d5;
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+  &.left {
+    right: -12px;
+    border-radius: 0 5px 5px 0;
+  }
+  &.right {
+    right: 12px;
+    border-radius: 5px 0 0 5px;
+  }
 }
-&.right {
-  right: 12px;
-  border-radius: 5px 0 0 5px;
-}
-}
+
 .swiper-button:after {
- top: 50%;
- border: solid transparent;
- content: " ";
- height: 0;
- width: 0;
- position: absolute;
- pointer-events: none;
- border-color: rgba(136, 183, 213, 0);
- border-width: 25px;
- margin-top: -25px;
- border-radius: 5px;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 25px;
+  margin-top: -25px;
+  border-radius: 5px;
 }
+
 .swiper-button.left:after {
- right: 100%;
- border-right-color: #88b7d5;
+  right: 100%;
+  border-right-color: #88b7d5;
 }
+
 .swiper-button.right:after {
- left: 100%;
- border-left-color: #88b7d5;
+  left: 100%;
+  border-left-color: #88b7d5;
 }
