@@ -42,7 +42,7 @@
     "parallelshell": "^1.0.4",
     "reactify": "^0.15.2",
     "stylus": "latest",
-    "uglify-js": "~2.4.15",
+    "uglify-js": "~2.6.0",
     "watch": "latest"
   },
   "scripts": {
